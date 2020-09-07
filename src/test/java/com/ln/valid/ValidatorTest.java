@@ -90,10 +90,12 @@ public class ValidatorTest {
 
     @Test
     public void contextLoads(){
+
         validator = Validation.byProvider(HibernateValidator.class).configure().failFast(false).buildValidatorFactory().getValidator();
         Order order = new Order();
         OrderItem item = new OrderItem();
         item.setEmail("12345@");
+        item.setItemCode("123456");
         item.setItemCode("123456");
         item.setItemName("love");
         order.setOrderItem(item);
