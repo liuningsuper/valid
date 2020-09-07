@@ -95,8 +95,7 @@ public class ValidatorTest {
         Order order = new Order();
         OrderItem item = new OrderItem();
         item.setEmail("12345@");
-        item.setItemCode("123456");
-        item.setItemCode("123456");
+
         item.setItemName("love");
         order.setOrderItem(item);
         Set<ConstraintViolation<Order>> result = validator.validate(order);
